@@ -1,0 +1,32 @@
+ td, th{
+    border: 1px solid black;
+    padding: 5px;
+}
+table{
+   
+}
+.heading{
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+.row p{
+    /* margin: 0px; */
+    padding: 1px;
+    font-size: 12px;
+}
+body{
+    background-color: #5cbbeb;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    /* font-family: 'Oswald', sans-serif; */
+}
+.container{
+    margin-top: 20vh;
+    border-radius: 12px;
+    margin-bottom: 20vh;
+}
+.btn{
+    background-color: #5cbbeb;
+}
+.below{
+    background-color: #e1e1e1;
+}
