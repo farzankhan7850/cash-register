@@ -7,6 +7,10 @@ const listOfNotes = document.querySelectorAll(".notes");
 let i = 0;
 
 
+document.getElementById('check-button').style.display = 'none';
+document.getElementById('hide-cash').style.display = 'none';
+document.getElementById('hide').style.display = 'none';
+
 // ERROR 
 const displayError = (message) => {
     message = '*' + message + "*";
@@ -25,13 +29,14 @@ const calculateChange = (amount) => {
 
         let n = Math.trunc(amount / notes[i]);
         if (n == 0)
-            listOfNotes[i++].innerHTML = " ";
+            listOfNotes[i].innerHTML = "";
         else {
 
             listOfNotes[i].style.color = '#5cbbeb';
             listOfNotes[i].style.fontSize = '20px';
             listOfNotes[i].innerHTML = n;
             amount = amount % notes[i];
+            console.log(amount)
         }
 
     }
@@ -42,6 +47,7 @@ const calculateChange = (amount) => {
 checkButton.addEventListener('click', () => {
 
     error.style.display = 'none';
+    document.getElementById('hide').style.display = 'block';
 
     if (billAmount.value < 0)
         displayError('Invalid Bill Amount');
@@ -64,3 +70,12 @@ checkButton.addEventListener('click', () => {
 
 );
 
+
+//oNCLICK  HIDE BUTTON
+
+document.getElementById('hide-button').addEventListener('click', ()=>{
+
+    document.getElementById('hide-cash').style.display = 'block';
+    document.getElementById('check-button').style.display = 'block';
+    document.getElementById('hide-button').style.display = 'none';
+});
