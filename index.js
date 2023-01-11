@@ -36,7 +36,6 @@ const calculateChange = (amount) => {
             listOfNotes[i].style.fontSize = '20px';
             listOfNotes[i].innerHTML = n;
             amount = amount % notes[i];
-            console.log(amount)
         }
 
     }
@@ -78,4 +77,10 @@ document.getElementById('hide-button').addEventListener('click', ()=>{
     document.getElementById('hide-cash').style.display = 'block';
     document.getElementById('check-button').style.display = 'block';
     document.getElementById('hide-button').style.display = 'none';
+});
+
+document.getElementById('reset').addEventListener('click', ()=>{
+
+	window.location.reload();
+    
 });
